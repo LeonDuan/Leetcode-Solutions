@@ -1,0 +1,10 @@
+# Write your MySQL query statement below
+select o.department as Department, employee.name as Employee, o.salary as Salary
+from employee
+join
+(select department.name as department, max(salary) as Salary, department.id as departmentid
+from employee
+join department on employee.departmentid = department.id
+group by department.name
+having department.name is not null) o
+on employee.DepartmentId = o.departmentid and employee.salary = o.Salary
