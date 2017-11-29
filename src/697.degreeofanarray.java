@@ -4,9 +4,9 @@ class Solution {
         int max_freq = 0;
         int shortest_len = Integer.MAX_VALUE;
         
-        Map&lt;Integer, Integer&gt; m = new HashMap();
-        Map&lt;Integer, Integer[]&gt; len = new HashMap();
-        for(int i = 0; i &lt; nums.length; i++){
+        Map<Integer, Integer> m = new HashMap();
+        Map<Integer, Integer[]> len = new HashMap();
+        for(int i = 0; i < nums.length; i++){
             int num = nums[i];
             
             if(!m.containsKey(num)){
@@ -24,7 +24,7 @@ class Solution {
             int cur_freq = m.get(cur_int);
             int cur_len = len.get(cur_int)[1] - len.get(cur_int)[0] + 1;
             
-            if(cur_freq &gt; max_freq || (cur_freq == max_freq &amp;&amp; cur_len &lt; shortest_len)){
+            if(cur_freq > max_freq || (cur_freq == max_freq && cur_len < shortest_len)){
                 max_int = cur_int;
                 max_freq = cur_freq;
                 shortest_len = cur_len;

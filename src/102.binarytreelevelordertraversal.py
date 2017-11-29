@@ -19,12 +19,12 @@ class Solution(object):
         
         s = [(root,0)]
         
-        while len(s) &gt; 0:
+        while len(s) > 0:
             cur_node,level = s.pop(0)
             if cur_node is None:
                 continue
             
-            if len(result) &lt; level + 1:
+            if len(result) < level + 1:
                 result.append([])
             
             result[level].append(cur_node.val)

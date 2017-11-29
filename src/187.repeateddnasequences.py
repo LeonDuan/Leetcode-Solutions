@@ -1,6 +1,6 @@
 class Solution(object):
     def findRepeatedDnaSequences(self, s):
-        if len(s) &lt;= 10:
+        if len(s) <= 10:
             return []
         
         appeared = set()

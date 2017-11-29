@@ -1,5 +1,5 @@
 public class Solution {
-    public HashMap&lt;Integer, Integer&gt; m = new HashMap&lt;&gt;();
+    public HashMap<Integer, Integer> m = new HashMap<>();
 
     public int numDecodings(String s) {
         if(s.length() == 0){
@@ -12,7 +12,7 @@ public class Solution {
             return m.get(index);
         }
 
-        if(index &gt;= s.length()){
+        if(index >= s.length()){
             m.put(index, 1);
             return 1;
         }
@@ -34,7 +34,7 @@ public class Solution {
         }
         else if(s.charAt(index) == '2'){
             if(index != s.length() - 1){
-                if(s.charAt(index + 1) &lt;= '6'){
+                if(s.charAt(index + 1) <= '6'){
                     int result = rec(s,index+1) + rec(s,index+2);
                     m.put(index, result);
                     return result;

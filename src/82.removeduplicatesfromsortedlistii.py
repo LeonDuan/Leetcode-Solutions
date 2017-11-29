@@ -26,7 +26,7 @@ class Solution(object):
         cur = head
         
         while cur is not None:
-            if toRemove[cur.val] &gt;= 2:
+            if toRemove[cur.val] >= 2:
                 prev.next = cur.next
             else:
                 prev = cur

@@ -1,26 +1,26 @@
 public class Solution {
 
 
-    public List&lt;List&lt;Integer&gt;&gt; combinationSum(int[] candidates, int target) {
-        Set&lt;ArrayList&lt;Integer&gt;&gt; s = new HashSet&lt;&gt;();
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        Set<ArrayList<Integer>> s = new HashSet<>();
         if(candidates.length == 0){
-            return new ArrayList&lt;&gt;();
+            return new ArrayList<>();
         }
-        rec(0, candidates, target, s, new ArrayList&lt;Integer&gt;());
-        List&lt;List&lt;Integer&gt;&gt; results = new ArrayList&lt;&gt;(s);
+        rec(0, candidates, target, s, new ArrayList<Integer>());
+        List<List<Integer>> results = new ArrayList<>(s);
         return results;
     }
 
-    public void rec(int idx, int[] candidates, int target, Set&lt;ArrayList&lt;Integer&gt;&gt; results, List&lt;Integer&gt; soFar){
+    public void rec(int idx, int[] candidates, int target, Set<ArrayList<Integer>> results, List<Integer> soFar){
 
         if(target == 0) {
-            results.add(new ArrayList&lt;Integer&gt;(soFar));
+            results.add(new ArrayList<Integer>(soFar));
             return;
         }
         if(idx == candidates.length) return;
-        if(target &lt; 0) return;
+        if(target < 0) return;
 
-        ArrayList&lt;Integer&gt; soFarClone = new ArrayList&lt;Integer&gt;(soFar);
+        ArrayList<Integer> soFarClone = new ArrayList<Integer>(soFar);
         soFarClone.add(candidates[idx]);
 
         rec(idx, candidates, target - candidates[idx], results, soFarClone);

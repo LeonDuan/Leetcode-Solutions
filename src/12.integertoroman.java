@@ -1,6 +1,6 @@
 public class Solution {
     public String intToRoman(int num) {
-        HashMap&lt;Integer, String&gt; m = new HashMap&lt;&gt;();
+        HashMap<Integer, String> m = new HashMap<>();
         m.put(0,"");
         m.put(1,"I");
         m.put(2,"II");
@@ -11,7 +11,7 @@ public class Solution {
         m.put(7,"VII");
         m.put(8,"VIII");
         m.put(9,"IX");
-        HashMap&lt;Integer, String&gt; m2 = new HashMap&lt;&gt;();
+        HashMap<Integer, String> m2 = new HashMap<>();
         m2.put(0,"");
         m2.put(1,"C");
         m2.put(2,"CC");
@@ -22,7 +22,7 @@ public class Solution {
         m2.put(7,"DCC");
         m2.put(8,"DCCC");
         m2.put(9,"CM");
-        HashMap&lt;Integer, String&gt; m3 = new HashMap&lt;&gt;();
+        HashMap<Integer, String> m3 = new HashMap<>();
         m3.put(0,"");
         m3.put(1,"X");
         m3.put(2,"XX");
@@ -35,7 +35,7 @@ public class Solution {
         m3.put(9,"XC");
         
         String result = "";
-            if(num &gt;= 1000){
+            if(num >= 1000){
                 int thou = (num - num%1000)/1000;
                 if(thou == 1){
                     result += "M";
@@ -48,17 +48,17 @@ public class Solution {
                 }
                 num = num%1000;
             }
-            if(num &gt;= 100){
+            if(num >= 100){
                 int hun = (num - num%100) / 100;
                 result += m2.get(hun);
                 num = num%100;
             }
-            if(num &gt;= 10){
+            if(num >= 10){
                 int tens = (num - num%10)/10;
                 result += m3.get(tens);
                 num = num%10;
             }
-            if(num &gt;= 0){
+            if(num >= 0){
                 result += m.get(num);
             }
             return result;

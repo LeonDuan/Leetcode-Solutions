@@ -14,7 +14,7 @@ public class Solution {
         ListNode result = null;
         ListNode current = null;
         int carry = 0;
-        while(!(cur1 == null &amp;&amp; cur2 == null)){
+        while(!(cur1 == null && cur2 == null)){
             if(cur1 == null){
                 toAdd1 = 0;
             }
@@ -30,7 +30,7 @@ public class Solution {
             int newData;
             newData = (toAdd1+toAdd2+carry)%10;
             ListNode newNode = new ListNode(newData);
-            if(toAdd1+toAdd2+carry&gt;=10){
+            if(toAdd1+toAdd2+carry>=10){
                 carry = 1;
             }
             else{

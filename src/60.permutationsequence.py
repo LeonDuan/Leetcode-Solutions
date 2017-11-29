@@ -11,7 +11,7 @@ class Solution():
 
         for i in range(len(nums)):
             will_have_discovered = math.factorial(len(nums) - 1)
-            if perms_soFar + will_have_discovered &gt;= self.k:
+            if perms_soFar + will_have_discovered >= self.k:
                 return self.rec(nums[:i] + nums[i + 1:], perms_soFar, str_soFar + str(nums[i]))
             else:
                 perms_soFar += will_have_discovered

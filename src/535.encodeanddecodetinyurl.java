@@ -1,5 +1,5 @@
 public class Codec {
-    Map&lt;String, String&gt; m = new HashMap&lt;&gt;();
+    Map<String, String> m = new HashMap<>();
     // Encodes a URL to a shortened URL.
     public String encode(String longUrl) {
         Random rand = new Random();

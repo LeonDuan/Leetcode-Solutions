@@ -17,5 +17,5 @@ class Solution:
         bottom = max(B, F)
         area1 = (C - A) * (D - B)
         area2 = (G - E) * (H - F)
-        overlap = 0 if right - left &lt; 0 or top - bottom &lt; 0 else (right-left)*(top-bottom)
+        overlap = 0 if right - left < 0 or top - bottom < 0 else (right-left)*(top-bottom)
         return area1 + area2 - overlap

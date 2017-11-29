@@ -20,8 +20,8 @@ public class Solution {
             return 0;
         }
         int currentMaxRange = 0;
-        for(int i = index; i &gt;= 0; i--){
-            if(index - i &lt;= nums[i]){
+        for(int i = index; i >= 0; i--){
+            if(index - i <= nums[i]){
                 currentMaxRange = index - i;
             }
         }

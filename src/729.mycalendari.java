@@ -1,9 +1,9 @@
 class MyCalendar {
 
-    ArrayList&lt;Booking&gt; bookings;
+    ArrayList<Booking> bookings;
 
     public MyCalendar() {
-        this.bookings = new ArrayList&lt;&gt;();
+        this.bookings = new ArrayList<>();
     }
     public MyCalendar(int start, int end){
         super();
@@ -17,7 +17,7 @@ class MyCalendar {
             if(cur_booking.overlap(new_booking)){
                 overlap ++;
             }
-            if(overlap &gt;= 1){
+            if(overlap >= 1){
                 return false;
             }
         }
@@ -35,7 +35,7 @@ class MyCalendar {
         }
 
         public boolean overlap(Booking other){
-            return (this.start &lt;= other.start &amp;&amp; this.end &gt;= other.start) || (this.start &gt;= other.start &amp;&amp; this.start &lt;= other.end) || (this.start &lt;= other.start &amp;&amp; this.end &gt;= other.end) || (this.start &lt;= other.start &amp;&amp; this.end &gt;= other.end);
+            return (this.start <= other.start && this.end >= other.start) || (this.start >= other.start && this.start <= other.end) || (this.start <= other.start && this.end >= other.end) || (this.start <= other.start && this.end >= other.end);
         }
     }
 }

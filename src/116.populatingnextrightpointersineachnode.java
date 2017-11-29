@@ -7,15 +7,15 @@
  * }
  */
 public class Solution {
-    Map&lt;Integer, List&lt;TreeLinkNode&gt;&gt; levels = new HashMap();
+    Map<Integer, List<TreeLinkNode>> levels = new HashMap();
 
     public void connect(TreeLinkNode root) {
         rec(root, 0);
 
         for(Integer key:levels.keySet()){
-            List&lt;TreeLinkNode&gt; l = levels.get(key);
+            List<TreeLinkNode> l = levels.get(key);
             TreeLinkNode prev = l.get(0);
-            for(int i = 1; i &lt; l.size(); i ++){
+            for(int i = 1; i < l.size(); i ++){
                 TreeLinkNode cur = l.get(i);
                 prev.next = cur;
                 prev = cur;
@@ -28,7 +28,7 @@ public class Solution {
             return;
         }
         if(!levels.containsKey (level)){
-            levels.put(level, new ArrayList&lt;TreeLinkNode&gt;());
+            levels.put(level, new ArrayList<TreeLinkNode>());
         }
         levels.get(level).add(node);
 

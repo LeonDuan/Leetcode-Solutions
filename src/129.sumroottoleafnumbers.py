@@ -21,7 +21,7 @@ class Solution(object):
         
         counter = 1
         temp = node.val
-        while temp &gt; 10:
+        while temp > 10:
             temp /= 10
             counter += 1
         soFar = 10*counter*soFar + node.val

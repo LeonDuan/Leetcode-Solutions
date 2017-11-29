@@ -18,5 +18,5 @@ class Solution:
             else:
                 diff = (timePoints[i+1] - timePoints[i]) % (24*60)
                 
-            if diff &lt; min_diff: min_diff = diff
+            if diff < min_diff: min_diff = diff
         return min_diff

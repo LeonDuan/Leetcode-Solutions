@@ -1,13 +1,13 @@
 public class Solution {
-    public List&lt;List&lt;String&gt;&gt; groupAnagrams(String[] strs) {
-        HashMap &lt;String, List&gt; m = new HashMap&lt;&gt;();
+    public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap <String, List> m = new HashMap<>();
 
         for(String str: strs){
             char[] chars = str.toCharArray();
             Arrays.sort(chars);
             String sortedStr = new String(chars);
             if(!m.containsKey(sortedStr)){
-                List newList = new ArrayList&lt;&gt;();
+                List newList = new ArrayList<>();
                 newList.add(str);
                 m.put(sortedStr, newList);
             }
@@ -16,7 +16,7 @@ public class Solution {
             }
         }
 
-        List&lt;List&lt;String&gt;&gt; toReturn = new ArrayList&lt;&gt;();
+        List<List<String>> toReturn = new ArrayList<>();
         for (List li:m.values()){
             toReturn.add(li);
         }

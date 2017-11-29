@@ -1,5 +1,5 @@
 class MagicDictionary {
-    Set&lt;String&gt; s = new HashSet&lt;&gt;();
+    Set<String> s = new HashSet<>();
     /** Initialize your data structure here. */
     public MagicDictionary() {
         return;
@@ -16,8 +16,8 @@ class MagicDictionary {
     
     /** Returns if there is any word in the trie that equals to the given word after modifying exactly one character */
     public boolean search(String word) {
-        for(int i = 0; i &lt; word.length(); i++){
-            for(char c = 'a'; c &lt;= 'z'; c++){
+        for(int i = 0; i < word.length(); i++){
+            for(char c = 'a'; c <= 'z'; c++){
                 String newWord = word.substring(0,i) + Character.toString(c) + word.substring(i + 1);
                 if (newWord.equals(word)) continue;
                 if(s.contains(newWord)) return true;

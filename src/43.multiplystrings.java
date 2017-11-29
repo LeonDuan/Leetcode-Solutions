@@ -3,10 +3,10 @@ public class Solution {
         if(num1.equals("0") || num2.equals("0")) return "0";
         String result = "";
         int counter = 0;
-        for(int i = num2.length()-1; i &gt;= 0; i --){
+        for(int i = num2.length()-1; i >= 0; i --){
             String inter = littleMult(num1, num2.charAt(i));
             //append 0's
-            for(int j = 0; j &lt; counter; j++){
+            for(int j = 0; j < counter; j++){
                 inter = inter + "0";
             }
             counter ++;
@@ -20,7 +20,7 @@ public class Solution {
         }
     }
     public String add(String tempResult, String num2){
-        if((tempResult.equals("")||tempResult.equals("0"))&amp;&amp;(num2.equals("") || num2.equals("0"))) return "";
+        if((tempResult.equals("")||tempResult.equals("0"))&&(num2.equals("") || num2.equals("0"))) return "";
         String result = "";
         if(tempResult.equals("")) return num2;
         if(num2.equals("")) return tempResult;
@@ -29,14 +29,14 @@ public class Solution {
         int num2Idx = num2.length()-1;
         while(true){
             int toAdd1, toAdd2;
-            if(tempResultIdx &lt; 0 &amp;&amp; num2Idx &lt; 0) break;
-            if(tempResultIdx &lt;0){
+            if(tempResultIdx < 0 && num2Idx < 0) break;
+            if(tempResultIdx <0){
                 toAdd1 = 0;
             }
             else{
                 toAdd1 = tempResult.charAt(tempResultIdx) - '0';
             }
-            if(num2Idx &lt; 0){
+            if(num2Idx < 0){
                 toAdd2 = 0;
             }
             else{
@@ -44,7 +44,7 @@ public class Solution {
             }
             int toAppend = carry + toAdd1 + toAdd2;
             result = toAppend%10 + result;
-            if(toAppend &gt;= 10) carry = 1;
+            if(toAppend >= 10) carry = 1;
             else carry = 0;
 
             tempResultIdx --;
@@ -58,7 +58,7 @@ public class Solution {
         String result = "";
         int carry = 0;
         if(num2 == '0') return "0";
-        for(int i = num1.length() - 1; i &gt;= 0; i--){
+        for(int i = num1.length() - 1; i >= 0; i--){
             int newNum = (num1.charAt(i) - '0') * (num2 - '0') + carry;
             carry = (newNum - newNum%10)/10;
             result = Character.toString((char)(newNum % 10 + '0')) + result;

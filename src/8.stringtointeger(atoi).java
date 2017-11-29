@@ -15,15 +15,15 @@ public class Solution {
         }
         
         long soFar = 0;
-        for(int i = 0; i &lt; str.length(); i++){
+        for(int i = 0; i < str.length(); i++){
             char curr = str.charAt(i);
             if(!Character.isDigit(curr)){
                 return toMult * (int)soFar;
             }
-            else if(toMult == 1 &amp;&amp; (soFar*10 + curr - '0' &gt; Integer.MAX_VALUE)){
+            else if(toMult == 1 && (soFar*10 + curr - '0' > Integer.MAX_VALUE)){
                 return Integer.MAX_VALUE;
             }
-            else if(toMult == -1 &amp;&amp; ((-1)*(soFar*10 + curr - '0') &lt; Integer.MIN_VALUE)){
+            else if(toMult == -1 && ((-1)*(soFar*10 + curr - '0') < Integer.MIN_VALUE)){
                 return Integer.MIN_VALUE;
             }
             else{

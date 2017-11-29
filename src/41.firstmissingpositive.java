@@ -4,13 +4,13 @@ public class Solution {
         for(int num : nums){
             firstMissingPositiveHelper(nums, num);
         }
-        for(int i = 0; i &lt; nums.length; i++){
+        for(int i = 0; i < nums.length; i++){
             if(nums[i] != i+1) return i+1;
         }
         return nums.length + 1;
     }
     public void firstMissingPositiveHelper(int[] nums, int num){
-        if(num &lt;= 0 || num &gt; nums.length) return;
+        if(num <= 0 || num > nums.length) return;
         if(nums[num-1] == num) {
             return;
         }

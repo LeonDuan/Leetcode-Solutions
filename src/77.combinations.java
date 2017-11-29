@@ -1,21 +1,21 @@
 class Solution {
-    List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
-    public List&lt;List&lt;Integer&gt;&gt; combine(int n, int k) {
-        List&lt;Integer&gt; l = new ArrayList&lt;&gt;();
-        for(int i = 0; i &lt; n; i++){
+    List<List<Integer>> result = new ArrayList<>();
+    public List<List<Integer>> combine(int n, int k) {
+        List<Integer> l = new ArrayList<>();
+        for(int i = 0; i < n; i++){
             l.add(i+1);
         }
-        rec(l, k, new ArrayList&lt;Integer&gt;(), 0);
+        rec(l, k, new ArrayList<Integer>(), 0);
         return result;
     }
 
-    public void rec(List&lt;Integer&gt; arr, int k, List&lt;Integer&gt; soFar, int start){
+    public void rec(List<Integer> arr, int k, List<Integer> soFar, int start){
         if(k == 0){
-            result.add(new ArrayList&lt;&gt;(soFar));
+            result.add(new ArrayList<>(soFar));
             return;
         }
 
-        for(int i = start; i &lt; arr.size(); i++){
+        for(int i = start; i < arr.size(); i++){
             int num = arr.get(i);
             soFar.add(num);
 

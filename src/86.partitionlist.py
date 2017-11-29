@@ -17,10 +17,10 @@ class Solution(object):
         # mid_last = None
         cur = head
         while cur is not None:
-            if cur.val &lt; x:
+            if cur.val < x:
                 before_head, before_last = self.insert(before_head, before_last, cur.val)
             
-            elif cur.val &gt;= x:
+            elif cur.val >= x:
                 after_head, after_last = self.insert(after_head, after_last, cur.val)
             
             # else:

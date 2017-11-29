@@ -14,7 +14,7 @@ class Solution:
             self.result.append(soFar)
             return
         
-        if sum(soFar) &gt; n or len(soFar) &gt; k or cur_num == 10:
+        if sum(soFar) > n or len(soFar) > k or cur_num == 10:
             return
         
         self.rec(k, n, soFar + [cur_num], cur_num + 1)

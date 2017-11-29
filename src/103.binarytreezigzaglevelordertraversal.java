@@ -8,26 +8,26 @@
  * }
  */
 class Solution {
-    List&lt;List&lt;TreeNode&gt;&gt; levels = new ArrayList();
+    List<List<TreeNode>> levels = new ArrayList();
 
-    public List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         rec(root, 0);
 
-        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList();
+        List<List<Integer>> result = new ArrayList();
 
-        for(int i = 0; i &lt; levels.size(); i++){
-            List&lt;Integer&gt; temp_res = new ArrayList();
+        for(int i = 0; i < levels.size(); i++){
+            List<Integer> temp_res = new ArrayList();
 
-            List&lt;TreeNode&gt; l = levels.get(i);
+            List<TreeNode> l = levels.get(i);
 
             if(i % 2 == 0){
-                for(int j = 0; j &lt; l.size(); j ++){
+                for(int j = 0; j < l.size(); j ++){
                     TreeNode cur = l.get(j);
                     temp_res.add(cur.val);
                 }
             }
             else{
-                for(int j = l.size()-1; j &gt;= 0; j --){
+                for(int j = l.size()-1; j >= 0; j --){
                     TreeNode cur = l.get(j);
                     temp_res.add(cur.val);
                 }
@@ -42,8 +42,8 @@ class Solution {
         if(node == null){
             return;
         }
-        if(level &gt;= levels.size()){
-            levels.add(new ArrayList&lt;TreeNode&gt;());
+        if(level >= levels.size()){
+            levels.add(new ArrayList<TreeNode>());
         }
         levels.get(level).add(node);
 

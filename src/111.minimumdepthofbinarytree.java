@@ -13,7 +13,7 @@ class Solution {
         return dfs(root, 1);
     }
     public int dfs(TreeNode node, int cur_depth){
-        if (node.left == null &amp;&amp; node.right == null) return cur_depth;
+        if (node.left == null && node.right == null) return cur_depth;
         int left = Integer.MAX_VALUE;
         int right = Integer.MAX_VALUE;
         if (node.left != null){

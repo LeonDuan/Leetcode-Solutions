@@ -13,7 +13,7 @@ class Solution:
             temp_result = []
             i = idx
             j = 0
-            while i &gt;= 0 and j &lt; len(matrix[0]):
+            while i >= 0 and j < len(matrix[0]):
                 temp_result.append(matrix[i][j])
                 j += 1
                 i -= 1
@@ -28,7 +28,7 @@ class Solution:
             temp_result = []
             i = len(matrix) - 1
             j = idx
-            while i &gt;= 0 and j &lt; len(matrix[0]):
+            while i >= 0 and j < len(matrix[0]):
                 temp_result.append(matrix[i][j])
                 i -= 1
                 j += 1

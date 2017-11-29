@@ -13,9 +13,9 @@ class Solution:
         return result
     
     def mark(self, grid, i, j):
-        if i &lt; 0 or i &gt;= len(grid):
+        if i < 0 or i >= len(grid):
             return
-        if j &lt; 0 or j &gt;= len(grid[0]):
+        if j < 0 or j >= len(grid[0]):
             return
         if grid[i][j] == '0':
             return

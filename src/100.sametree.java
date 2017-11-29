@@ -12,11 +12,11 @@ class Solution {
         return isSameTreeHelper(p, q);
     }
     public boolean isSameTreeHelper(TreeNode p, TreeNode q){
-        if(p == null &amp;&amp; q == null) return true;
+        if(p == null && q == null) return true;
         if(!((p == null) == (q == null))) return false;
         if(!(p.val == q.val)){
             return false;
         }
-        return isSameTreeHelper(p.left, q.left) &amp;&amp; isSameTreeHelper(p.right, q.right);
+        return isSameTreeHelper(p.left, q.left) && isSameTreeHelper(p.right, q.right);
     }
 }

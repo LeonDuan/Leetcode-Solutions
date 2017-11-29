@@ -13,7 +13,7 @@ class Solution:
         for i in range(len(arr)):
             num = arr[i]
             diff = abs(num - x)
-            if diff &lt; closest:
+            if diff < closest:
                 closest_idx = i
                 closest = diff
                  
@@ -22,15 +22,15 @@ class Solution:
         left = closest_idx - 1
         right = closest_idx + 1
                 
-        while k &gt; 0:
+        while k > 0:
             k -= 1
 
-            if left &gt;= 0:
+            if left >= 0:
                 left_num = arr[left]
             else:
                 left_num = None
 
-            if right &lt; len(arr):
+            if right < len(arr):
                 right_num = arr[right]
             else:
                 right_num = None
@@ -44,7 +44,7 @@ class Solution:
                 left -= 1
                 continue
 
-            if abs(left_num-x) &lt;= abs(right_num-x):
+            if abs(left_num-x) <= abs(right_num-x):
                 result = [arr[left]] + result
                 left -= 1
             else:

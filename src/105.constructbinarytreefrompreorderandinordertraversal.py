@@ -15,8 +15,8 @@ class Solution(object):
         length = inorder.index(root)
 
         newNode = TreeNode(root)
-        if length &gt;= 1:
+        if length >= 1:
             newNode.left = self.buildTree(preorder[1:1+length], inorder[0:inorder.index(root)])
-        if len(preorder)-length &gt;= 1:
+        if len(preorder)-length >= 1:
             newNode.right = self.buildTree(preorder[length+1:], inorder[inorder.index(root)+1:])
         return newNode

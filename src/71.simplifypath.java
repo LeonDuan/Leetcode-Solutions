@@ -1,6 +1,6 @@
 class Solution {
     public String simplifyPath(String path) {
-        if(path.charAt(path.length()-1) == '/' &amp;&amp; !path.equals("/")){
+        if(path.charAt(path.length()-1) == '/' && !path.equals("/")){
             path = path.substring(1, path.length() - 1);
         }
         else{
@@ -8,9 +8,9 @@ class Solution {
         }
 
         String[] dir = path.split("/");
-        ArrayList&lt;String&gt; simResult = new ArrayList&lt;&gt;();
+        ArrayList<String> simResult = new ArrayList<>();
 
-        for(int i = 0; i &lt; dir.length; i++){
+        for(int i = 0; i < dir.length; i++){
             String cur = dir[i];
             if(cur.equals(".") || cur.equals("")){
 

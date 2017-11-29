@@ -34,7 +34,7 @@ public class Solution {
 
         //merge
         p1 = head;
-        while(p1 != null &amp;&amp; p2 != null){
+        while(p1 != null && p2 != null){
             ListNode origP1Next = p1.next;
             p1.next = p2;
             p1 = p2;

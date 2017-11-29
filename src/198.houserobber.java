@@ -4,7 +4,7 @@ class Solution {
         
         int[] best = new int[nums.length];
         
-        for(int i = 0; i &lt; best.length; i ++){
+        for(int i = 0; i < best.length; i ++){
             best[i] = -1;
         }
         
@@ -12,7 +12,7 @@ class Solution {
     }
     
     public int helper(int[] nums, int idx, int[] best){
-        if(idx &gt;= nums.length) return 0;
+        if(idx >= nums.length) return 0;
         
         if(best[idx] != -1) return best[idx];
         

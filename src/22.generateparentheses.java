@@ -1,6 +1,6 @@
 public class Solution {
-    ArrayList&lt;String&gt; solution = new ArrayList&lt;&gt;();
-    public List&lt;String&gt; generateParenthesis(int n) {
+    ArrayList<String> solution = new ArrayList<>();
+    public List<String> generateParenthesis(int n) {
         if(n == 0){
             solution.add("");
             return solution;
@@ -18,7 +18,7 @@ public class Solution {
         }
         else {
             rec(left - 1, right, soFar + "(");
-            if(right &gt; left) {
+            if(right > left) {
                 rec(left, right - 1, soFar + ")");
             }
         }

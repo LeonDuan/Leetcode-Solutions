@@ -2,7 +2,7 @@ class Solution {
     public String countAndSay(int n) {
         String cur_num_str = "1";
 
-        for(int i = 0; i &lt; n-1; i++) {
+        for(int i = 0; i < n-1; i++) {
             StringBuilder result = new StringBuilder();
             int count = 0;
             char prev = '0';

@@ -37,7 +37,7 @@ class Solution(object):
         return root
         
     def rec(self, arr, start, end):
-        if start &gt; end:
+        if start > end:
             return None
         mid = (start + end)//2
         cur_node = TreeNode(arr[mid])

@@ -15,14 +15,14 @@ public class Solution {
         switch (side) {
 
             case 'R':
-                while (lo &lt;= hi) {
+                while (lo <= hi) {
                     int mid = (lo + hi) / 2;
 
                     if (nums[mid] == target) {// found target
 
 
                         //check if it's the right most one
-                        if (mid == 0 || nums[mid] &gt; nums[mid - 1]) {
+                        if (mid == 0 || nums[mid] > nums[mid - 1]) {
                             return mid;
                         }
 
@@ -31,7 +31,7 @@ public class Solution {
                             hi = mid - 1;
                         }
                     }
-                    else if(nums[mid] &lt; target){
+                    else if(nums[mid] < target){
                         lo = mid + 1;
                     }
                     else{
@@ -41,14 +41,14 @@ public class Solution {
                 return -1;
 
             case 'L':
-                while (lo &lt;= hi) {
+                while (lo <= hi) {
                     int mid = (lo + hi) / 2;
 
                     if (nums[mid] == target) {// found target
 
 
                         //check if it's the right most one
-                        if (mid == nums.length - 1 || nums[mid] &lt; nums[mid + 1]) {
+                        if (mid == nums.length - 1 || nums[mid] < nums[mid + 1]) {
                             return mid;
                         }
 
@@ -57,7 +57,7 @@ public class Solution {
                             lo = mid + 1;
                         }
                     }
-                    else if(nums[mid] &lt; target){
+                    else if(nums[mid] < target){
                         lo = mid + 1;
                     }
                     else{

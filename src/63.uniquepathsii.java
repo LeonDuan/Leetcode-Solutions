@@ -6,9 +6,9 @@ class Solution {
         if(obstacleGrid[0][0] == 1) return 0;
         else result[0][0] = 1;
         
-        for(int i = 0; i &lt; height; i ++){
-            for(int j = 0; j &lt; width; j++){
-                if(i == 0 &amp;&amp; j == 0) continue;
+        for(int i = 0; i < height; i ++){
+            for(int j = 0; j < width; j++){
+                if(i == 0 && j == 0) continue;
                 if(obstacleGrid[i][j] == 1){
                     result[i][j] = 0;
                 }

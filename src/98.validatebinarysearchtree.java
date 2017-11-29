@@ -13,9 +13,9 @@ class Solution {
     }
     public boolean isValidBSTHelper(TreeNode root, long lLimit, long uLimit) {
         if(root == null) return true;
-        if(root.val &gt;= uLimit || root.val &lt;= lLimit) return false;
+        if(root.val >= uLimit || root.val <= lLimit) return false;
         else{
-            return isValidBSTHelper(root.left, lLimit, root.val) &amp;&amp; isValidBSTHelper(root.right, root.val, uLimit);
+            return isValidBSTHelper(root.left, lLimit, root.val) && isValidBSTHelper(root.right, root.val, uLimit);
         }
     }
 }

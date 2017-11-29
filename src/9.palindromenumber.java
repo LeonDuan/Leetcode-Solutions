@@ -1,9 +1,9 @@
 public class Solution {
     public boolean isPalindrome(int x) {
-        if(x &lt; 0){
+        if(x < 0){
             return false;
         }
-        if(x &lt; 10){
+        if(x < 10){
             return true;
         }
         String s = Integer.toString(x);

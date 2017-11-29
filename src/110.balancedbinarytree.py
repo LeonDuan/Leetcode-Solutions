@@ -25,5 +25,5 @@ class Solution:
             left_balanced, left_height = left_result
             right_balanced, right_height = right_result
             
-            return (abs(left_height-right_height) &lt;= 1 and left_balanced and right_balanced, 1+max(left_height, right_height))
+            return (abs(left_height-right_height) <= 1 and left_balanced and right_balanced, 1+max(left_height, right_height))
     

@@ -7,8 +7,8 @@ class Solution {
         
         if(matrix.length == 0) return;
         if(matrix[0].length == 0) return;
-        for(int i = 0; i &lt; matrix.length; i++){
-            for(int j = 0; j &lt; matrix[0].length; j++){
+        for(int i = 0; i < matrix.length; i++){
+            for(int j = 0; j < matrix[0].length; j++){
                 int num = matrix[i][j];
                 if(num == 0){
                     if(i == 0){
@@ -30,10 +30,10 @@ class Solution {
                 }
             }
         }
-        for(int i = 1; i &lt; matrix.length - 1; i++){
+        for(int i = 1; i < matrix.length - 1; i++){
             if(matrix[i][0] == 0) setRowToZero(matrix, i); 
         }
-        for(int j = 1; j &lt; matrix[0].length - 1; j++){
+        for(int j = 1; j < matrix[0].length - 1; j++){
             if(matrix[0][j] == 0) setColToZero(matrix, j);
         }
         if(firstRow){
@@ -51,16 +51,16 @@ class Solution {
         
     }
     public void setRowToZero(int[][] matrix, int row){
-        for(int i = 0; i &lt; matrix[0].length; i++){
+        for(int i = 0; i < matrix[0].length; i++){
             matrix[row][i] = 0;
         }
     }
     public void setColToZero(int[][] matrix, int col){
-        for(int j = 0; j &lt; matrix.length; j++){
+        for(int j = 0; j < matrix.length; j++){
             matrix[j][col] = 0;
         }
     }
     public boolean isCorner(int i, int j, int[][] matrix){
-        return ((i==0 &amp;&amp; j==0)||(i==0 &amp;&amp; j==matrix[0].length-1)||(i==matrix.length-1 &amp;&amp; j==0)||(i==matrix.length-1 &amp;&amp; j==matrix[0].length-1));
+        return ((i==0 && j==0)||(i==0 && j==matrix[0].length-1)||(i==matrix.length-1 && j==0)||(i==matrix.length-1 && j==matrix[0].length-1));
     }
 }

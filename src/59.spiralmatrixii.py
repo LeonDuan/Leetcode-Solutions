@@ -12,7 +12,7 @@ class Solution(object):
         self.cur = 2
         self.filled = 1
         
-        while self.cur &lt;= n ** 2:
+        while self.cur <= n ** 2:
             i,j = self.fillRow(i,j+1,"right")
             i,j = self.fillCol(i+1,j,"down")
             i,j = self.fillRow(i,j-1,"left")

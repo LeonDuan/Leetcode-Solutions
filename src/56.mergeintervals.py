@@ -16,8 +16,8 @@ class Solution:
             if cur_inter is None:
                 cur_inter = Interval(interval.start, interval.end)
             else:
-                if cur_inter.end &gt;= interval.start:
-                    cur_inter.end = interval.end if interval.end &gt; cur_inter.end else cur_inter.end
+                if cur_inter.end >= interval.start:
+                    cur_inter.end = interval.end if interval.end > cur_inter.end else cur_inter.end
                 else:
                     result.append(cur_inter)
                     print("Here")
